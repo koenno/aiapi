@@ -27,7 +27,7 @@ func New(answerer Answerer) *Server {
 }
 
 func (s *Server) Routes(r gin.IRoutes) {
-	r.POST("/question", s.Answer)
+	r.POST("/answer", s.Answer)
 }
 
 func (s *Server) Answer(gc *gin.Context) {
