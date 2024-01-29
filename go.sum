@@ -36,6 +36,10 @@ github.com/koenno/aidevs2 v0.0.0-20240125200931-70cdb5fec076 h1:K6qpE1YLIkgb2Cwl
 github.com/koenno/aidevs2 v0.0.0-20240125200931-70cdb5fec076/go.mod h1:TgRr4FA3sFmEbciaUZn1B6YOdeozK5L7yXW+FHkyP7g=
 github.com/koenno/aidevs2 v0.0.0-20240128214647-3ae59598be29 h1:imixO+NOSTI8JqzC8BP/xyQKmfawsPOJ+DwAxoqCk2U=
 github.com/koenno/aidevs2 v0.0.0-20240128214647-3ae59598be29/go.mod h1:TgRr4FA3sFmEbciaUZn1B6YOdeozK5L7yXW+FHkyP7g=
+github.com/koenno/aidevs2 v0.0.0-20240129195745-6878f22b3e9b h1:CY6a3lZl9tPEezXYsqAC59ulx/N3pX4+cYE9aqW+avc=
+github.com/koenno/aidevs2 v0.0.0-20240129195745-6878f22b3e9b/go.mod h1:TgRr4FA3sFmEbciaUZn1B6YOdeozK5L7yXW+FHkyP7g=
+github.com/koenno/aidevs2 v0.0.0-20240129212210-dbca3704373c h1:NfQ41ZYNOvLSk9UH2jOFFsjevhIvBPW2gj26tDcFKxA=
+github.com/koenno/aidevs2 v0.0.0-20240129212210-dbca3704373c/go.mod h1:TgRr4FA3sFmEbciaUZn1B6YOdeozK5L7yXW+FHkyP7g=
 github.com/leodido/go-urn v1.2.4 h1:XlAE/cm/ms7TE/VMVoduSpNBoyc2dOxHs5MZSwAN63Q=
 github.com/leodido/go-urn v1.2.4/go.mod h1:7ZrI8mTSeBSHl/UaRyKQW1qZeMgak41ANeCNaVckg+4=
 github.com/mattn/go-isatty v0.0.19 h1:JITubQf0MOLdlGRuRq+jtsDlekdYPia9ZFsB8h/APPA=

@@ -4,6 +4,8 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"log"
+	"strings"
 )
 
 const (
@@ -27,7 +29,7 @@ var (
 )
 
 type AIProvider interface {
-	CompleteChat(system, user, assistant string) (string, error)
+	CompleteChat(system string, userMsgs ...string) (string, error)
 }
 
 type AIModerator interface {
@@ -37,6 +39,7 @@ type AIModerator interface {
 type Service struct {
 	aip       AIProvider
 	moderator AIModerator
+	knowledge []string
 }
 
 func New(aip AIProvider, moderator AIModerator) *Service {
@@ -61,7 +64,15 @@ func (s *Service) Ask(ctx context.Context, question string) (string, error) {
 		return "", fmt.Errorf("%w: '%s'", ErrTooLong, question)
 	}
 
-	answer, err := s.aip.CompleteChat(system, question, "")
+	if !strings.HasSuffix(question, "?") {
+		s.knowledge = append(s.knowledge, question)
+		log.Printf("remembering info: %s", question)
+		return "", nil
+	}
+
+	user := append([]string{}, s.knowledge...)
+	user = append(user, question)
+	answer, err := s.aip.CompleteChat(system, user...)
 	if err != nil {
 		return "", fmt.Errorf("%w: %v", ErrEngine, err)
 	}
